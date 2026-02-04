@@ -7,7 +7,7 @@ const { machineIdSync } = require('node-machine-id'); // Adicionado para obter o
 const admin = require('firebase-admin'); // Adicionado para usar Firebase Admin
 
 // Configuração do Firebase Admin
-const serviceAccount = require('./utils/key.json'); // Substitua pelo caminho do seu arquivo JSON
+const serviceAccount = require('./utils/key.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
@@ -54,3 +54,4 @@ client.on('ready', async () => {
 });
 
 client.login(TOKEN);
+
